@@ -1,0 +1,117 @@
+body {
+    background-color: rgb(104, 122, 73);
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.info-pokemon {
+    background-color: rgb(220, 214, 225);
+    padding: 15px;
+    width: 40%;
+    border-radius: 15px 0 0 15px;
+    text-align: center;
+}
+
+.name-pokemon {
+    font-size: 28px;
+    color: rgb(5, 5, 5);
+    font-weight: bold;
+}
+
+.id-pokemon {
+    font-size: 18px;
+    color: rgb(17, 17, 17);
+    margin: 5px 0;
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.type-pokemon {
+    background-color: rgb(232, 50, 50);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.image-pokemon {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
+.image-pokemon img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .info-pokemon {
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .image-pokemon {
+        width: 100%;
+    }
+
+    .image-pokemon img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .name-pokemon {
+        font-size: 22px;
+    }
+
+    .id-pokemon {
+        font-size: 16px;
+    }
+
+    .type-pokemon {
+        font-size: 12px;
+    }
+}
