@@ -13,11 +13,7 @@ class PokemonFavorites(SuperClass):
         raise NotImplementedError("Los pokemones no se pueden encontrar de manera individual")
     
     def find_all(self, user_id):
-        #data = list(self.collection.find({"user_id": ObjectId(user_id)}))
-        #AGGREGATE
-        #Pipelines > multiples objetos
         data = list(self.collection.aggregate([
-                #Primer paso hacer match con el usuario!
                 {
                     "$match":{
                         "user_id": ObjectId(user_id)
