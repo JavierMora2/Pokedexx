@@ -18,9 +18,7 @@ class PokemonFavorites(SuperClass):
                     "$match":{
                         "user_id": ObjectId(user_id)
                     }
-                },
-                #[Multiples registros]
-                {
+                },                {
                     "$lookup":{
                         "from":"pokemons",
                         "localField":"pokemon_id",
@@ -29,7 +27,6 @@ class PokemonFavorites(SuperClass):
                     }
                 },
                 {"$unwind":"$pokemon"},
-                #Multiples registros pero ahora con un campo extra que es "pokemon"
                 {
                     "$lookup":{
                         "from":"users",
@@ -39,7 +36,6 @@ class PokemonFavorites(SuperClass):
                     }
                 },
                 {"$unwind":"$user"},
-                #Multiples registros pero ahora con un campo extra mas que es "user"
                 {
                     "$project":{
                         "user":1,
